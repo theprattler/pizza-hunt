@@ -67,6 +67,8 @@ const handlePizzaSubmit = event => {
   })
   .catch(err => {
     console.log(err);
+    // runs the function to store data in IndexedDB database when no internet connection
+    saveRecord(formData);
   });
 };
 
